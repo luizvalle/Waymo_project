@@ -1,7 +1,7 @@
 import os
-import tensorflow as tf
 import math
 import numpy as np
+import tensorflow as tf
 import itertools
 import carla
 import random
@@ -153,7 +153,7 @@ def start_simulation(frames,world):
         #     print(i,vehicle.id)
 
 
-file_path = '/media/yongjie/Seagate Expansion Drive/Waymo_dataset/trainning_car_following/'
+file_path = '../datasets/training_00003'
 file_path = file_path + 'car_following_segs_training_training_0006_segment-12012663867578114640_820_000_840_000.tfrecord'
 dataset = tf.data.TFRecordDataset(file_path, compression_type='')
 

@@ -22,9 +22,9 @@ import glob
 # tar_name = 'training_0001'
 # files_path = '/media/yongjie/Seagate Expansion Drive/Waymo_dataset/training/{}/'.format(tar_name)
 
-tar_name = 'trainning_car_following'
-files_path = '/media/yongjie/Seagate Expansion Drive/Waymo_dataset/trainning_car_following/'
-files = glob.glob(files_path + "car_following_segs_training_training_0004_segment-10664823084372323928_4360_000_4380_000.tfrecord")
+tar_name = 'training_00003'
+files_path = f'../datasets/{tar_name}'
+files = glob.glob(f"{files_path}/*.tfrecord")
 print(len(files))
 
 # For visualization: https://drive.google.com/drive/u/0/folders/1-CXDJwgd96fTHHboekfdyIxVj2lzjf1n
@@ -452,7 +452,7 @@ def video_generation_with_label(folder, frames):
     out.release()
 
 import shutil
-RESULT_PATH = '/media/yongjie/Seagate Expansion Drive/Waymo_dataset/Team1-master/Team1-master/result/'
+RESULT_PATH = f'../result/{tar_name}'
 
 if os.path.exists(RESULT_PATH):
     shutil.rmtree(RESULT_PATH)

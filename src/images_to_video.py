@@ -11,7 +11,7 @@ pathlist.sort()
 j=1
 for i in pathlist:
     img = cv2.imread(path + i)
-	print(j)
+    print(j)
     j=j+1
     videowriter.write(img)
 videowriter.release()
